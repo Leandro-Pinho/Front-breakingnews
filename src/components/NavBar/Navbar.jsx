@@ -1,24 +1,22 @@
-
-import Logo from '../../images/logo.svg'
-
-import "./navbar.css"
+import Logo from "../../images/logo.svg";
+import { Button, ImageLogo, InputSpace, Nav } from "./navbarStyled";
 
 
 const Navbar = () => {
-    return (
-        <>
-            <nav>
-                <div className="input-search-space">
-                    <i className="bi bi-search"></i>
-                    <input type="text" placeholder='Pesquise por um titulo...' />
-                </div>
+  return (
+    <>
+      <Nav>
+        <InputSpace>
+          <i className="bi bi-search"></i>
+          <input type="text" placeholder="Pesquise por um titulo..." />
+        </InputSpace>
 
-                <img src={Logo} alt="logo da breaking news" />
+        <ImageLogo src={Logo} alt="logo da breaking news" />
 
-                <button>Entrar</button>
-            </nav>
-        </>
-    )
-}
+        <Button>Entrar</Button>
+      </Nav>
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;
